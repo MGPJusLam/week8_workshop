@@ -20,19 +20,20 @@ import com.unimelb.swen30006.monopoly.Player;
  */
 public class GoToJailSquare extends Square {
 	private Square jail;
+	private LuckyCardFacade facade;
 	
 	public GoToJailSquare(String name, int index) {
 		super(name, index);
+		facade = new LuckyCardFacade();
 	}
 	
 	public void setJail(Square jail){
 		this.jail = jail;
 	}
 
+
 	@Override
 	public void landedOn(Player p) {
-		p.setLocation(jail);
-		System.out.println(p.getName()+" Goes to jail!");
+		String cardType = facade.draw(p, jail);
 	}
-
 }

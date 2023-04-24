@@ -10,5 +10,4 @@ public class JailExcemptionCard extends JailCard{
 		this.cardValue = 0;
 		this.cardDescription = "Lucky You! You won't go to jail.";
 	}
-
 }

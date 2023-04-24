@@ -18,5 +18,4 @@ public class GoToJailCard extends JailCard{
 		super.action(p, location);
 		p.setLocation(location);
 	}
-
 }
